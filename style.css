@@ -51,6 +51,15 @@
   border: 3px #ec5242 solid;
   padding: 5px 10px;
   background: white;
+  transition: .5s;
+}
+
+.nav-link.donate :hover {
+  color: #fff;
+}
+
+.nav-link.donate:hover {
+  background: #ec5242;
 }
 
 .nav-link.donate a {
@@ -61,6 +70,10 @@
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.nav-link.active a {
+  color: #ec5242;
 }
 
 .logo {
@@ -132,6 +145,29 @@
   font-size: 24px;
   font-weight: 900;
   font-family: 'COCOGOOSE', sans-serif;
+}
+
+.welcome > a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome > a > img {
+  align-self: center;
+  height: 30px;
+  position: relative;
+  animation: hover 1s ease-in infinite;
+}
+
+@keyframes hover {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: 10px;
+    animation-timing-function: ease-out;
+  }
 }
 
 .w-quote {
@@ -264,14 +300,10 @@
 
 .founder-image {
   flex: 2;
-  position: relative;
 }
 
 .founder-image > img {
-  width: 80%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  width: 100%;
 }
 
 .founder-card-content {
@@ -299,6 +331,24 @@
   position: relative;
   margin-top: 15px;
   font-size: 14px;
+}
+
+.founder-more {
+  cursor: pointer;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  border: 1px solid #d3d3d3;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.founder-more i {
+  color: #ec5242;
 }
 
 @media screen and (min-width: 640px) {
@@ -370,12 +420,14 @@
     backdrop-filter: blur(0);
   }
 
-  .nav-link {
+  .nav-link a:hover {
+    color: #ec5242;
   }
 
   .nav-link a {
     color: #272a31;
     text-transform: capitalize;
+    transition: .5s;
   }
 
   .welcome {
@@ -428,6 +480,10 @@
 
   .founder-image > img {
     height: unset;
+  }
+
+  .founder-more{
+    display: none;
   }
 }
 

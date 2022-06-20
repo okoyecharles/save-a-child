@@ -9,6 +9,10 @@
   color: #272a31;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #top-nav {
   display: none;
 }
@@ -158,6 +162,12 @@
   height: 30px;
   position: relative;
   animation: hover 1s ease-in infinite;
+  transition: .5s;
+}
+
+.welcome > a > img:hover {
+  height: 40px;
+  animation: none;
 }
 
 @keyframes hover {

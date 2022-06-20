@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/cocogoose');
 
 * {
   box-sizing: border-box;
@@ -130,10 +131,12 @@
 .welcome > h3 {
   font-size: 24px;
   font-weight: 900;
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
 .w-quote {
   text-align: center;
+  font-family: 'COCOGOOSE', sans-serif;
 }
 
 .work {
@@ -141,6 +144,7 @@
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
+  z-index: -1;
 }
 
 .work > h1 {
@@ -159,6 +163,7 @@
   height: 2px;
   width: 50%;
   background: #ec5242;
+  z-index: 2;
 }
 
 .work-cards {
@@ -216,11 +221,97 @@
   cursor: pointer;
 }
 
+.founders {
+  background-color: #fff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: -1;
+}
+
+.founders > h1 {
+  text-align: center;
+  color: #272a31;
+  position: relative;
+  width: fit-content;
+  font-size: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.founders > h1::after {
+  content: '';
+  margin: 20px auto;
+  height: 2px;
+  width: 50%;
+  background: #ec5242;
+  z-index: 2;
+}
+
+.founder-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  justify-items: center;
+  width: 100%;
+}
+
+.founder-card {
+  display: flex;
+  gap: 20px;
+}
+
+.founder-image {
+  flex: 2;
+  position: relative;
+}
+
+.founder-image > img {
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.founder-card-content {
+  flex: 3;
+}
+
+.founder-card-content > h1 {
+  font-size: 18px;
+}
+
+.founder-occupation {
+  color: #ec5242;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: italic;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.founder-card-content hr {
+  width: 10%;
+}
+
+.founder-description {
+  position: relative;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
 @media screen and (min-width: 640px) {
   .work-card {
     flex-direction: row;
     width: 600px;
   }
+
+  .founder-image > img {
+    width: 70%;
+    height: 100%;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -266,6 +357,7 @@
     height: 50px;
     box-shadow: 0 10px 10px -10px lightgray;
     background: #fff;
+    z-index: 100;
   }
 
   .nav-links {
@@ -305,6 +397,10 @@
     text-align: start;
   }
 
+  .work {
+
+  }
+
   .work-cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -324,6 +420,14 @@
   .work-prompt:hover {
     color: #ec5242;
     border-bottom: 2px solid #ec5242;
+  }
+
+  .founder-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .founder-image > img {
+    height: unset;
   }
 }
 

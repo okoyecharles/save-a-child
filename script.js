@@ -1,6 +1,8 @@
 const hamburger = document.getElementById('hamburger')
 const navLinks = document.getElementById('nav-links')
 const workCards = document.querySelector('.work-cards')
+const founderCards = document.querySelector('.founder-cards')
+
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active')
@@ -46,3 +48,43 @@ let createWorkCards = (arr, i) => {
   workCards.appendChild(workCard)
 }
 [...Array(workCardInfo.length).keys()].forEach(num => createWorkCards(workCardInfo, num))
+
+
+
+const founderCardInfo = [
+  {
+    image: './images/img-l.jfif',
+    name: 'Yochai Benkler',
+    occupation: 'Berkman International Professor of national studies',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    image: './images/img-l.jfif',
+    name: 'Yochai Benkler',
+    occupation: 'Berkman International Professor of national studies',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  },
+  {
+    image: './images/img-l.jfif',
+    name: 'Yochai Benkler',
+    occupation: 'Berkman International Professor of national studies',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  }
+]
+
+let createFounderCards = (arr, i) => {
+  let founderCard = document.createElement('div')
+  founderCard.className = 'founder-card'
+  founderCard.innerHTML = `
+  <div class="founder-image">
+    <img src= ${arr[i].image} alt="">
+  </div>
+  <div class="founder-card-content">
+    <h1>${arr[i].name}</h1>
+    <p class="founder-occupation">${arr[i].occupation}</p>
+    <hr></hr>
+    <p class="founder-description">${arr[i].description}</p>
+  `
+  founderCards.append(founderCard)
+}
+[...Array(founderCardInfo.length).keys()].forEach(num => createFounderCards(founderCardInfo, num))

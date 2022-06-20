@@ -45,6 +45,7 @@
 .nav-link.donate {
   border: 3px #ec5242 solid;
   padding: 5px 10px;
+  background: white;
 }
 
 .nav-link.donate a {
@@ -131,6 +132,70 @@
   text-align: center;
 }
 
+.work {
+  background-color: #272a31;
+  padding: 30px 10px;
+}
+
+.work > h1 {
+  text-align: center;
+  color: white;
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.work > h1::after {
+  content: '';
+  margin: 20px auto;
+  height: 2px;
+  width: 50%;
+  background: #ec5242;
+}
+
+.work-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.work-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.178);
+  padding: 20px 30px;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.work-card-image {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.work-card-image > img {
+  height: 100px;
+  width: 100px;
+}
+
+.work-card-title {
+  color: #ec5242;
+  font-size: 20px;
+  flex: .8;
+}
+
+.work-card-text {
+  color: white;
+  flex: 2;
+}
+
+
+
 @media screen and (min-width: 768px) {
   #top-nav {
     margin: 0;
@@ -167,7 +232,7 @@
   }
 
   #nav-bar {
-    position:sticky;
+    position: sticky;
     top: 0;
     justify-content: space-around;
     align-items: center;
@@ -196,7 +261,7 @@
 
   .welcome {
     padding: 10% 30% 10% 15%;
-    height: calc(100vh - 90px);
+    min-height: calc(100vh - 90px);
     background: linear-gradient(rgba(255, 255, 255, 0.836), white), url(./images/african-boy.jpg);
     background-blend-mode: luminosity;
     background-size: cover;
@@ -212,6 +277,21 @@
 
   .w-quote {
     text-align: start;
+  }
+
+  .work-cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .work-card {
+    flex-direction: column;
+  }
+
+}
+
+@media screen and (min-width: 880px) {
+  .work-cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 

@@ -58,7 +58,7 @@ html {
   transition: .5s;
 }
 
-.nav-link.donate :hover {
+.nav-link.donate:hover a {
   color: #fff;
 }
 
@@ -370,7 +370,11 @@ html {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: #f7f6f6;
+  background: 
+  url(./images/bg-design\ 1.png) 0 0 no-repeat,
+  url(./images/bg-design\ 2.png) 105% 20% no-repeat,
+  #f7f6f6
+  ;
 }
 
 .about-welcome > h1 {
@@ -516,6 +520,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  background: url(./images/bg-design\ 3.png) 105% 0 no-repeat;
 }
 
 .footer-logo {
@@ -544,6 +549,14 @@ footer {
 
   .footer-content {
     font-size: 16px;
+  }
+
+  .about-welcome {
+    background: 
+    url(./images/bg-design\ 1.png) 0 0 no-repeat,
+    url(./images/bg-design\ 2.png) 105% 25% no-repeat,
+    #f7f6f6
+  ;
   }
 
 }
@@ -648,10 +661,6 @@ footer {
     text-align: start;
   }
 
-  .work {
-
-  }
-
   .work-cards {
     grid-template-columns: 1fr 1fr;
   }
@@ -706,17 +715,40 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
+
+  .about-welcome {
+    background: 
+    url(./images/bg-design\ 1.png) 0 0 no-repeat,
+    url(./images/bg-design\ 2.png) 82.5% 20% no-repeat,
+    #f7f6f6
+  ;
+  }
 }
 
 @media screen and (min-width: 880px) {
   .work-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .about-welcome {
+    background: 
+    url(./images/bg-design\ 1.png) 0 0 no-repeat,
+    url(./images/bg-design\ 2.png) 82.5% 25% no-repeat,
+    #f7f6f6
+  ;
+  }
 }
 
 @media screen and (min-width: 1060px) {
   .work-cards {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .about-welcome {
+    background: 
+    url(./images/bg-design\ 1.png) 0 0 no-repeat,
+    url(./images/bg-design\ 2.png) 82.5% 25% no-repeat,
+    #f7f6f6
+  ;
   }
 }
 

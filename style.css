@@ -17,6 +17,10 @@ html {
   display: none;
 }
 
+.founder-more i {
+  color: #ec5242;
+}
+
 .top-nav-link li a i {
   color: #fff;
 }
@@ -55,19 +59,7 @@ html {
   border: 3px #ec5242 solid;
   padding: 5px 10px;
   background: white;
-  transition: .5s;
-}
-
-.nav-link.donate:hover a {
-  color: #fff;
-}
-
-.nav-link.donate:hover {
-  background: #ec5242;
-}
-
-.nav-link.donate a {
-  color: #ec5242;
+  transition: 0.5s;
 }
 
 .nav-link a {
@@ -76,8 +68,30 @@ html {
   text-transform: uppercase;
 }
 
+.welcome > a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.a-contact > a {
+  font-weight: 900;
+}
+
+.nav-link.donate a {
+  color: #ec5242;
+}
+
 .nav-link.active a {
   color: #ec5242;
+}
+
+.nav-link.donate:hover a {
+  color: #fff;
+}
+
+.nav-link.donate:hover {
+  background: #ec5242;
 }
 
 .logo {
@@ -111,9 +125,11 @@ html {
   transform: rotate(45deg);
   top: 10px;
 }
+
 .hamburger.active .ham-line:nth-child(2) {
   display: none;
 }
+
 .hamburger.active .ham-line:nth-child(3) {
   transform: rotate(-45deg);
 }
@@ -151,10 +167,24 @@ html {
   font-family: 'COCOGOOSE', sans-serif;
 }
 
-.welcome > a {
+.work-card-image > img {
+  width: 200px;
+}
+
+.founder-image > img {
   width: 100%;
-  display: flex;
-  justify-content: center;
+}
+
+.a-l-img > img {
+  width: 100%;
+}
+
+.p-v-image img {
+  height: 300px;
+}
+
+.footer-logo > img {
+  height: 60px;
 }
 
 .welcome > a > img {
@@ -162,7 +192,7 @@ html {
   height: 30px;
   position: relative;
   animation: hover 1s ease-in infinite;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .welcome > a > img:hover {
@@ -171,9 +201,11 @@ html {
 }
 
 @keyframes hover {
-  0%, 100% {
+  0%,
+  100% {
     top: 0;
   }
+
   50% {
     top: 10px;
     animation-timing-function: ease-out;
@@ -240,14 +272,10 @@ html {
   align-content: center;
 }
 
-.work-card-image > img {
-  width: 200px;
-}
-
 .work-card-title {
   color: #ec5242;
   font-size: 20px;
-  flex: .8;
+  flex: 0.8;
 }
 
 .work-card-text {
@@ -314,10 +342,6 @@ html {
   flex: 2;
 }
 
-.founder-image > img {
-  width: 100%;
-}
-
 .founder-card-content {
   flex: 3;
 }
@@ -359,10 +383,6 @@ html {
   font-size: 13px;
 }
 
-.founder-more i {
-  color: #ec5242;
-}
-
 /* About - Page - Styles */
 
 .about-welcome {
@@ -370,11 +390,10 @@ html {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: 
-  url(./images/bg-design\ 1.png) 0 0 no-repeat,
-  url(./images/bg-design\ 2.png) 105% 20% no-repeat,
-  #f7f6f6
-  ;
+  background:
+    url(./images/bg-design\ 1.png) 0 0 no-repeat,
+    url(./images/bg-design\ 2.png) 105% 20% no-repeat,
+    #f7f6f6;
 }
 
 .about-welcome > h1 {
@@ -398,10 +417,6 @@ html {
 
 .a-contact {
   text-align: center;
-}
-
-.a-contact > a {
-  font-weight: 900;
 }
 
 .about-logo {
@@ -434,10 +449,6 @@ html {
   border: 1px solid #d3d3d3;
   margin-top: 20px;
   padding: 10px;
-}
-
-.a-l-img > img {
-  width: 100%;
 }
 
 .p-visits {
@@ -476,10 +487,6 @@ html {
   overflow: hidden;
 }
 
-.p-v-image  img {
-  height: 300px;
-}
-
 .p-v-image > span {
   background: #ec5342d7;
   position: absolute;
@@ -492,7 +499,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: .5s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .p-v-image:hover > span {
@@ -527,10 +534,6 @@ footer {
   width: 40%;
 }
 
-.footer-logo > img {
-  height: 60px;
-}
-
 .footer-content {
   width: 50%;
   font-size: 12px;
@@ -552,13 +555,11 @@ footer {
   }
 
   .about-welcome {
-    background: 
-    url(./images/bg-design\ 1.png) 0 0 no-repeat,
-    url(./images/bg-design\ 2.png) 105% 25% no-repeat,
-    #f7f6f6
-  ;
+    background:
+      url(./images/bg-design\ 1.png) 0 0 no-repeat,
+      url(./images/bg-design\ 2.png) 105% 25% no-repeat,
+      #f7f6f6;
   }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -603,6 +604,10 @@ footer {
     justify-content: center;
   }
 
+  .founder-image > img {
+    height: unset;
+  }
+
   .logo a img {
     height: 50px;
   }
@@ -628,14 +633,18 @@ footer {
     backdrop-filter: blur(0);
   }
 
-  .nav-link a:hover {
-    color: #ec5242;
-  }
-
   .nav-link a {
     color: #272a31;
     text-transform: capitalize;
-    transition: .5s;
+    transition: 0.5s;
+  }
+
+  .welcome > a {
+    display: none;
+  }
+
+  .nav-link a:hover {
+    color: #ec5242;
   }
 
   .welcome {
@@ -653,10 +662,6 @@ footer {
     width: 70%;
   }
 
-  .welcome > a {
-    display: none;
-  }
-
   .w-quote {
     text-align: start;
   }
@@ -672,10 +677,9 @@ footer {
 
   .work-prompt {
     background: none;
-    transition: .5s;
+    transition: 0.5s;
     border-bottom: 2px solid white;
   }
-
 
   .work-prompt:hover {
     color: #ec5242;
@@ -686,17 +690,17 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .founder-image > img {
-    height: unset;
-  }
-
-  .founder-more{
+  .founder-more {
     display: none;
   }
 
   /* About - Page - Styles */
   .about-welcome {
     padding: 10% 20%;
+    background:
+      url(./images/bg-design\ 1.png) 0 0 no-repeat,
+      url(./images/bg-design\ 2.png) 82.5% 20% no-repeat,
+      #f7f6f6;
   }
 
   .a-w-description {
@@ -715,26 +719,18 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-
-  .about-welcome {
-    background: 
-    url(./images/bg-design\ 1.png) 0 0 no-repeat,
-    url(./images/bg-design\ 2.png) 82.5% 20% no-repeat,
-    #f7f6f6
-  ;
-  }
 }
 
 @media screen and (min-width: 880px) {
   .work-cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
   .about-welcome {
-    background: 
-    url(./images/bg-design\ 1.png) 0 0 no-repeat,
-    url(./images/bg-design\ 2.png) 82.5% 25% no-repeat,
-    #f7f6f6
-  ;
+    background:
+      url(./images/bg-design\ 1.png) 0 0 no-repeat,
+      url(./images/bg-design\ 2.png) 82.5% 25% no-repeat,
+      #f7f6f6;
   }
 }
 
@@ -744,11 +740,9 @@ footer {
   }
 
   .about-welcome {
-    background: 
-    url(./images/bg-design\ 1.png) 0 0 no-repeat,
-    url(./images/bg-design\ 2.png) 82.5% 25% no-repeat,
-    #f7f6f6
-  ;
+    background:
+      url(./images/bg-design\ 1.png) 0 0 no-repeat,
+      url(./images/bg-design\ 2.png) 82.5% 25% no-repeat,
+      #f7f6f6;
   }
 }
-

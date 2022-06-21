@@ -53,22 +53,22 @@ let createWorkCards = (arr, i) => {
 
 const founderCardInfo = [
   {
-    image: './images/img-l.jfif',
-    name: 'Yochai Benkler',
-    occupation: 'Berkman International Professor of national studies',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    image: './images/dr-tedros.jfif',
+    name: 'Dr Tedros Adhanom Ghebreyesus',
+    occupation: 'CEO of World Health Organization.',
+    description: 'Dr Tedros Adhanom Ghebreyesus was elected WHO Director-General for a five-year term by WHO Member States at the Seventieth World Health Assembly in May 2017.'
   },
   {
-    image: './images/img-l.jfif',
-    name: 'Yochai Benkler',
-    occupation: 'Berkman International Professor of national studies',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    image: './images/oprah-winfrey.jfif',
+    name: 'Oprah Winfrey',
+    occupation: 'American Talk Show Host',
+    description: 'By the mid-1990s, Winfrey had reinvented her show with a focus on literature, self-improvement, mindfulness, and spirituality.'
   },
   {
-    image: './images/img-l.jfif',
-    name: 'Yochai Benkler',
-    occupation: 'Berkman International Professor of national studies',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    image: './images/bill-gates.jfif',
+    name: 'Bill Gates',
+    occupation: 'CEO and Manager of Microsoft',
+    description: 'He’s given more than $40 billion so far and he is the most charitable person in the world, much of it through annual grants to The Bill & Melinda Gates Foundation, where it’s used to fight poverty and improve healthcare in the United States and other nations.'
   }
 ]
 

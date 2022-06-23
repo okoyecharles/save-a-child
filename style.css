@@ -387,7 +387,8 @@ html {
   display: none;
 }
 
-.founder-card:nth-child(1).hide, .founder-card:nth-child(2).hide {
+.founder-card:nth-child(1).hide,
+.founder-card:nth-child(2).hide {
   display: flex;
 }
 

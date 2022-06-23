@@ -383,6 +383,16 @@ html {
   font-size: 13px;
 }
 
+.founder-card.hide {
+  display: none;
+}
+
+.founder-card:nth-child(1).hide, .founder-card:nth-child(2).hide {
+  display: flex;
+}
+
+
+
 /* About - Page - Styles */
 
 .about-welcome {
@@ -688,6 +698,10 @@ footer {
 
   .founder-cards {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .founder-card.hide {
+    display: flex;
   }
 
   .founder-more {

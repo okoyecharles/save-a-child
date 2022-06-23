@@ -71,7 +71,7 @@ const founderInfo = [
 
 const createFounderCards = (arr, i) => {
   const founderCard = document.createElement('div');
-  founderCard.className = 'founder-card';
+  founderCard.className = 'founder-card hide';
   founderCard.innerHTML = `
   <div class="founder-image">
     <img src= ${arr[i].image} alt="">
@@ -85,3 +85,16 @@ const createFounderCards = (arr, i) => {
   founderCards.append(founderCard);
 };
 [...Array(founderInfo.length).keys()].forEach((num) => createFounderCards(founderInfo, num));
+
+const founderCard = Array.from(document.querySelectorAll('.founder-card'))
+const morebutton = document.querySelector('.founder-more');
+morebutton.addEventListener('click', () => {
+  founderCard.forEach(card => card.classList.toggle('hide'))
+  if (morebutton.classList.contains('less')) {
+    morebutton.innerHTML = `MORE<i class="fa-solid fa-caret-down"></i>`
+    morebutton.classList.remove('less')
+  } else {
+    morebutton.innerHTML = `LESS<i class="fa-solid fa-caret-up"></i>`
+    morebutton.classList.add('less')
+  }
+})

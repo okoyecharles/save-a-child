@@ -104,7 +104,7 @@ To get a local copy up and running, follow these steps.
 ### Setup
 
 #### Github
-- Enter this url: [https://github.com/okoyecharles/project-name](https://github.com/OkoyeCharles/project-name) in your web browser.
+- Enter this url: [https://github.com/okoyecharles/save-a-child](https://github.com/OkoyeCharles/save-a-child) in your web browser.
 - Once opened navigate to the top left level of the project a green code download button will be visible on the righthand side.
 - Select the download Zip option from drop-down menu.
 - Once the download is complete you will be able to access my project locally.

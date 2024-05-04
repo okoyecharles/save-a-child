@@ -97,41 +97,7 @@ html {
   display: none;
 }
 
-.hamburger {
-  display: flex;
-  flex-direction: column;
-  width: 30px;
-  gap: 5px;
-  justify-content: space-around;
-  align-items: center;
-  cursor: pointer;
-}
 
-.ham-line {
-  height: 5px;
-  width: 100%;
-  background: #272a31;
-  transition: 1s;
-}
-
-.hamburger.active .ham-line {
-  position: relative;
-  z-index: 3;
-  background: white;
-}
-
-.hamburger.active .ham-line:nth-child(1) {
-  transform: rotate(45deg);
-  top: 10px;
-}
-
-.hamburger.active .ham-line:nth-child(2) {
-  display: none;
-}
-
-.hamburger.active .ham-line:nth-child(3) {
-  transform: rotate(-45deg);
-}
 
 .welcome {
   padding: 80px 20px 50px 20px;

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="js/about.js" defer></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -14,46 +15,62 @@
   </head>
   <body>
     <!-- Top Navigation -->
-    <nav id="top-nav">
-      <ul class="top-nav-links">
-        <li class="top-nav-link">
-          <a href="https://github.com/OkoyeCharles/" target="_blank" rel="noopener"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-        </li>
-        <li class="top-nav-link">
-          <a href="https://twitter.com/OkoyeCharles_" target="_blank" rel="noopener"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-        <li class="top-nav-link"><a href="#">English</a></li>
-        <li class="top-nav-link"><a href="#">My Page</a></li>
-        <li class="top-nav-link"><a href="#">Logout</a></li>
-      </ul>
-    </nav>
+    <div class="top-nav-container">
+      <nav class="top-nav">
+        <ul class="top-nav-socials">
+          <li>
+            <a
+              href="https://github.com/okoyecharles"
+              aria-label="github"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/okoyecharlesk"
+              aria-label="social"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+        </ul>
+        <ul class="top-nav-links">
+          <li><a href="https://okoyecharles.com">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- Main Nav-Bar -->
-    <nav id="nav-bar">
-      <div class="logo">
-        <a href="index.html"
-          ><img src="./assets/images/Save-The-Child-Logo.png" alt=""
-        /></a>
-      </div>
-      <div id="hamburger" class="hamburger">
-        <div class="ham-line"></div>
-        <div class="ham-line"></div>
-        <div class="ham-line"></div>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li class="nav-link"><a href="index.html">Home</a></li>
-        <li class="nav-link active"><a href="about.html">About</a></li>
-        <li class="nav-link"><a href="">Program</a></li>
-        <li class="nav-link"><a href="">Join</a></li>
-        <li class="nav-link"><a href="">Sponsor</a></li>
-        <li class="nav-link"><a href="">News</a></li>
-        <li class="nav-link donate"><a href="">Donate</a></li>
-      </ul>
-    </nav>
+    <div class="main-nav-container">
+      <nav class="main-nav">
+        <div class="logo">
+          <a href="index.html">
+            <img src="./assets/images/Logo.svg" height="40" alt="Logo" />
+          </a>
+        </div>
+        <button
+          id="hamburger"
+          class="hamburger"
+          aria-controls="nav-links"
+          aria-label="open main menu"
+          aria-expanded="false"
+        >
+          <div class="ham-line"></div>
+          <div class="ham-line"></div>
+          <div class="ham-line"></div>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li class="nav-link active"><a href="index.html">Home</a></li>
+          <li class="nav-link"><a href="about.html">About</a></li>
+          <li class="nav-link"><a href="">Join</a></li>
+          <li class="nav-link"><a href="">Sponsor</a></li>
+        </ul>
+        <button class="donate-button">Donate</button>
+      </nav>
+    </div>
 
     <!-- About Welcome Section -->
     <section class="about-welcome">
@@ -132,14 +149,31 @@
     </section>
 
     <!-- Footer Section -->
-    <footer>
-      <div class="footer-logo">
-        <img src="./assets/images/Save-The-Child-Logo.png" alt="" />
-      </div>
-      <div class="footer-content">
-        <div class="footer-name">2022 Save The Child Africa.</div>
-        <div class="footer-licence">All Rights Reserved.</div>
-      </div>
-    </footer>
+    <div class="footer-container">
+      <footer>
+        <div>
+          <a href="index.html">
+            <img
+              src="./assets/images/Logo.svg"
+              class="footer-logo"
+              alt="Logo"
+              height="64"
+            />
+          </a>
+        </div>
+        <div class="footer-content">
+          <div class="footer-license">
+            <p>2022 Save The Child Africa.</p>
+            <p>All Rights Reserved.</p>
+          </div>
+          <p>
+            Built by
+            <a rel="noopener noreferrer" target="_blank" href="https://okoyecharles.com"
+              >Okoye Charles</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

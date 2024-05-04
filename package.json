@@ -2,7 +2,7 @@
   "name": "capstone-save-a-child",
   "version": "1.0.0",
   "description": "This is project demonstrates my ability to incorporate HTML, CSS, JavaScript and a few other frameworks to create something outstainding.",
-  "main": "about.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

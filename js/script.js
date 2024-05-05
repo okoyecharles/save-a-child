@@ -7,29 +7,29 @@ const workCardInfo = [
     image: "./assets/places/burundi.jpg",
     header: "Burundi",
     description:
-      "Providing Resources like Food, Clothing and Education for children due to the widespread poverty faced by them today...",
+      "Empowering children in poverty through food, clothing & education.",
   },
   {
     image: "./assets/places/somalia.jpg",
     header: "Somalia",
     description:
-      "Known for their reccuring humanitarian crisis, we help by providing shelter and other needed resources",
+      "Aiding communities in crisis with shelter & essential resources.",
   },
   {
     image: "./assets/places/mozambique.jpg",
     header: "Mozambique",
-    description: "We contribute by hosting conferences to reduce internal corruption...",
+    description: "Combating internal corruption through leadership conferences.",
   },
   {
     image: "./assets/places/sierra.jpg",
     header: "Sierra Leone",
-    description: "We help by providing shelter and other essential resources",
+    description: "Empowering communities with shelter & support",
   },
   {
     image: "./assets/places/kenya.jpg",
     header: "Kenya",
     description:
-      "One of the major problems faced by kenyans is lack of sufficient and clean water, We provide for the children accordingly.",
+      "Ensuring clean water for Kenyan children.",
   },
 ];
 
@@ -40,7 +40,7 @@ const createWorkCards = (arr, i) => {
     <div class="work-card-image">
       <img src= ${arr[i].image} alt=${arr[i].header}>
     </div>
-    <h2 class="work-card-title">${arr[i].header}</h2>
+    <h3 class="work-card-header">${arr[i].header}</h3>
     <p class="work-card-text">${arr[i].description}</p>
   `;
   workCards.appendChild(workCard);

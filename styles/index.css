@@ -5,7 +5,7 @@
   background: 
     linear-gradient(rgba(0, 0, 0, 0.1), 20px, rgba(255, 255, 255, 0)),
     linear-gradient(rgba(255, 255, 255, 0.8), white),
-    url('../assets/background/african-boy.jpg');
+    url('../assets/background/african-boy.webp');
   background-size: cover;
   background-position: top center;
 }
@@ -111,8 +111,88 @@
 }
 
 /* Work Section */
-.work {
+.work-container {
   background: var(--color-dark);
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+#work {
+  position: absolute;
+  top: -72px;
+  left: 0;
+}
+
+.work {
+  width: min(100%, var(--max-content-width));
+  padding: 3rem 1.5rem 5rem;
+  color: var(--color-grey);
+  display: flex;
+  flex-direction: column;
+
+  .work-header {
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 4rem;
+  }
+
+  .work-header::after {
+    content: '';
+    width: 4rem;
+    height: 0.125rem;
+    background-color: var(--color-orange);
+
+    position: absolute;
+    bottom: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.work-cards {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.25rem;
+  margin-bottom: 4rem;
+}
+
+.work-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 480px);
+
+  .work-card-header {
+    color: var(--color-orange);
+    font-size: 18px;
+  }
+
+  .work-card-image {
+    height: 128px;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 0 0 1px var(--color-grey);
+    margin-bottom: 0.5rem;
+  }
+
+  .work-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.work-card:hover {
+  box-shadow: 0 0 0 0.125rem var(--color-grey) inset;
+}
+
+.work-prompt {
+  text-transform: uppercase;
+  margin-inline: auto;
+  color: var(--color-grey);
 }
 
 
@@ -137,5 +217,25 @@
     a {
       width: 32px;
     }
+  }
+
+  .work {
+    .work-header {
+      font-size: 1.5rem;
+    }
+  }
+
+  .work-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .work-card-header {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .work-cards {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }

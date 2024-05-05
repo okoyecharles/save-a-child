@@ -1,0 +1,141 @@
+/* Welcome Section */
+.welcome-container {
+  display: grid;
+  place-items: center;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.1), 20px, rgba(255, 255, 255, 0)),
+    linear-gradient(rgba(255, 255, 255, 0.8), white),
+    url('../assets/background/african-boy.jpg');
+  background-size: cover;
+  background-position: top center;
+}
+
+.welcome {
+  width: min(100%, var(--max-content-width));
+  padding: 7.5rem 1.5rem 5rem;
+  background: transparent;
+  color: var(--color-dark);
+}
+
+.w-header {
+  margin: 0 0 1rem;
+  color: var(--color-orange);
+  font-weight: 900;
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: -2%;
+  line-height: 1.1;
+  max-width: 800px;
+}
+
+.w-description {
+  background: var(--color-light-grey);
+  padding: 1rem;
+  box-shadow: 0 0 0 0.25rem white;
+  border-radius: 0.25rem;
+  max-width: 700px;
+}
+
+.w-sub-header {
+  font-weight: 900;
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  line-height: 1.1;
+  letter-spacing: -2%;
+  text-transform: uppercase;
+  margin: 3rem 0 0.75rem;
+}
+
+.w-coa {
+  margin: 4rem 0 0;
+  display: grid;
+  place-items: center;
+  --speed: 1.5s;
+  --color-initial: var(--color-grey);
+  --color-play: var(--color-dark);
+
+  a {
+    position: relative;
+    cursor: pointer;
+    width: 24px;
+    aspect-ratio: 1 / 1;
+  }
+
+  a svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    transition: 0.5s;
+    animation: hover var(--speed) ease infinite;
+  }
+
+  a svg path:nth-child(1) {
+    stroke: var(--color-initial);
+    animation: color-change-1 var(--speed) linear infinite;
+    
+  }
+  a svg path:nth-child(2) {
+    stroke: var(--color-initial);
+    animation: color-change-2 var(--speed) linear infinite;
+  }
+  a svg path:nth-child(3) {
+    stroke: var(--color-initial);
+    animation: color-change-3 var(--speed) linear infinite;
+  }
+}
+
+@keyframes color-change-1 {
+  0%, 20% { stroke: var(--color-initial) }
+  10% { stroke: var(--color-play) }
+}
+@keyframes color-change-2 {
+  14%, 37% { stroke: var(--color-initial) }
+  25% { stroke: var(--color-play) }
+}
+@keyframes color-change-3 {
+  30%, 50% { stroke: var(--color-initial) }
+  40% { stroke: var(--color-play) }
+}
+
+@keyframes hover {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  50% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+/* Work Section */
+.work {
+  background: var(--color-dark);
+}
+
+
+@media screen and (min-width: 768px) {
+  .w-header {
+    font-size: 56px;
+  }
+
+  .w-description {
+    padding: 2rem;
+  }
+
+  .w-sub-header {
+    font-size: 32px;
+  }
+
+  .w-sub-description {
+    font-size: 18px;
+  }
+
+  .w-coa {
+    a {
+      width: 32px;
+    }
+  }
+}

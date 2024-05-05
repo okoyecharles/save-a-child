@@ -112,7 +112,7 @@ html {
 .welcome > h1 {
   color: #ec5242;
   font-weight: 900;
-  font-size: 32px;
+  font-size: 128px;
 }
 
 .w-description {
@@ -152,30 +152,7 @@ html {
   height: 60px;
 }
 
-.welcome > a > img {
-  align-self: center;
-  height: 30px;
-  position: relative;
-  animation: hover 1s ease-in infinite;
-  transition: 0.5s;
-}
 
-.welcome > a > img:hover {
-  height: 40px;
-  animation: none;
-}
-
-@keyframes hover {
-  0%,
-  100% {
-    top: 0;
-  }
-
-  50% {
-    top: 10px;
-    animation-timing-function: ease-out;
-  }
-}
 
 .w-quote {
   text-align: center;

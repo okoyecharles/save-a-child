@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Important variables */
+:root {
+  --color-dark: #272A31;
+  --color-grey: #D3D3D3;
+  --color-light-grey: #EEEEEE;
+  --color-orange: #EC5242;
+
+  --max-content-width: 1200px;
+}
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -11,6 +22,12 @@
 */
 * {
   margin: 0;
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background: var(--color-orange);
+  color: white;
 }
 /*
   Typographic tweaks!
@@ -50,14 +67,4 @@ button {
   padding: 0;
   background-color: transparent;
   border: none;
-}
-
-/* Important variables */
-:root {
-  --color-dark: #272A31;
-  --color-grey: #D3D3D3;
-  --color-light-grey: #FBFBFB;
-  --color-orange: #EC5242;
-
-  --max-content-width: 1200px;
 }

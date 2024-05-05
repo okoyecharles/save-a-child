@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
-    <script src="js/index.js" defer></script>
-    <title>Save The Child</title>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <title>Save A Child</title>
   </head>
   <body>
     <!-- Top Navigation -->
@@ -47,7 +49,7 @@
     <div class="main-nav-container">
       <nav class="main-nav">
         <div class="logo">
-          <a href="index.html">
+          <a href="/">
             <img src="./assets/images/Logo.svg" height="40" alt="Logo" />
           </a>
         </div>
@@ -63,32 +65,64 @@
           <div class="ham-line"></div>
         </button>
         <ul class="nav-links" id="nav-links">
-          <li class="nav-link active"><a href="index.html">Home</a></li>
+          <li class="nav-link active"><a href="/">Home</a></li>
           <li class="nav-link"><a href="about.html">About</a></li>
-          <li class="nav-link"><a href="">Join</a></li>
-          <li class="nav-link"><a href="">Sponsor</a></li>
+          <li class="nav-link"><a href="/">Program</a></li>
+          <li class="nav-link"><a href="/">Join</a></li>
+          <li class="nav-link"><a href="/">Sponsor</a></li>
+          <li class="nav-link"><a href="/">News</a></li>
         </ul>
         <button class="donate-button">Donate</button>
       </nav>
     </div>
 
     <!-- Welcome Section -->
-    <section class="welcome">
-      <h1>A LITTLE CHANGE CAN MAKE A BIG DIFFERENCE</h1>
-      <p class="w-description">
-        A place where everyone is welcome to assist and help an orphan, child or victim
-        from anywhere in the world... Since the COVID-19 outbreak a lot of children has
-        lost their homes, parents and livelihood. Now <b>YOU</b> have a chance to support
-        them.
-      </p>
-      <h3>AT YOUR OWN CONVENIENCE...</h3>
-      <p class="w-quote">
-        <em
-          >“The best way to find yourself is to lose yourself in the service of
-          others."</em
-        ><br /><b>- Mahatma Gandhi</b>
-      </p>
-      <a href="#work"><img src="./assets/images/droppressed.png" alt="null" /></a>
+    <section class="welcome-container">
+      <div class="welcome">
+        <h1 class="w-header">A LITTLE CHANGE CAN MAKE A BIG DIFFERENCE</h1>
+        <p class="w-description">
+          We are committed to supporting sick and less fortunate children around the
+          globe, touching the lives and hearts of countless children since 2022.
+        </p>
+        <h3 class="w-sub-header">Building Hope</h3>
+        <p class="w-sub-description">
+          By creating nurturing environments, and support programs that provide emotional
+          well-being
+        </p>
+        <div class="w-coa">
+          <a href="#work" aria-label="view our work">
+            <svg
+              width="37"
+              height="38"
+              viewBox="0 0 37 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 2L19.1034 12L34 2"
+                stroke="black"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 14L19.6379 24L35 14"
+                stroke="black"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 26L19.6379 36L35 26"
+                stroke="black"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Work Section -->
@@ -113,7 +147,7 @@
     <div class="footer-container">
       <footer>
         <div>
-          <a href="index.html">
+          <a href="/">
             <img
               src="./assets/images/Logo.svg"
               class="footer-logo"

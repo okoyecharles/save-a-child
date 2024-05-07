@@ -2,7 +2,7 @@
   "name": "capstone-save-a-child",
   "version": "1.0.0",
   "description": "This is project demonstrates my ability to incorporate HTML, CSS, JavaScript and a few other frameworks to create something outstainding.",
-  "main": "about.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,14 +17,12 @@
     "url": "https://github.com/OkoyeCharles/capstone-save-a-child/issues"
   },
   "homepage": "https://github.com/OkoyeCharles/capstone-save-a-child#readme",
-  "dependencies": {
-    "hint": "^7.0.1"
-  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import": "^2.29.1",
+    "hint": "^7.1.11",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",

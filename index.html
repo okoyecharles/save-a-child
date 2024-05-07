@@ -1,86 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
-  <script src="script.js" defer></script>
-  <title>Save The Child</title>
-</head>
-<body>
-  <!-- Top Navigation -->
-  <nav id="top-nav">
-    <ul class="top-nav-links">
-      <li class="top-nav-link"><a href="https://github.com/OkoyeCharles/" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a></li>
-      <li class="top-nav-link"><a href="https://twitter.com/OkoyeCharles_" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
-      <li class="top-nav-link"><a href="#">English</a></li>
-      <li class="top-nav-link"><a href="#">My Page</a></li>
-      <li class="top-nav-link"><a href="#">Logout</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script src="js/navigation.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <title>Save A Child</title>
+    <meta name="description" content="An organization-themed project, dedicated to helping troubled and unfortunate chidren around the world. Developed by Okoye Charles.">
+    <meta name="robots" content="index,follow">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <a class="skip-to-content" href="#welcome">
+      <button tabindex="-1">Skip To Content</button>
+    </a>
 
-  <!-- Main Nav-Bar -->
-  <nav id="nav-bar">
-    <div class="logo"><a href="index.html"><img src="./images/Save-The-Child-Logo.png" alt=""></a></div>
-    <div id="hamburger" class="hamburger">
-      <div class="ham-line"></div>
-      <div class="ham-line"></div>
-      <div class="ham-line"></div>
+    <!-- Top Navigation -->
+    <div class="top-nav-container">
+      <nav class="top-nav">
+        <ul class="top-nav-socials">
+          <li>
+            <a
+              href="https://github.com/okoyecharles"
+              aria-label="github"
+              target="_blank"
+              rel="noopener"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/okoyecharlesk"
+              aria-label="social"
+              target="_blank"
+              rel="noopener"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+        </ul>
+        <ul class="top-nav-links">
+          <li>
+            <a href="https://okoyecharles.com" target="_blank" rel="noopener"
+              >Portfolio</a
+            >
+          </li>
+        </ul>
+      </nav>
     </div>
-    <ul class="nav-links" id="nav-links">
-      <li class="nav-link active"><a href="index.html">Home</a></li>
-      <li class="nav-link"><a href="about.html">About</a></li>
-      <li class="nav-link"><a href="">Program</a></li>
-      <li class="nav-link"><a href="">Join</a></li>
-      <li class="nav-link"><a href="">Sponsor</a></li>
-      <li class="nav-link"><a href="">News</a></li>
-      <li class="nav-link donate"><a href="">Donate</a></li>
-    </ul>
-  </nav>
 
-  <!-- Welcome Section -->
-  <section class="welcome">
-    <h1>A LITTLE CHANGE CAN MAKE A BIG DIFFERENCE</h1>
-    <p class="w-description">
-      A place where everyone is welcome to assist and help an orphan, child or victim from anywhere in the world...
-      Since the COVID-19 outbreak a lot of children has lost their homes, parents and livelihood.
-      Now <b>YOU</b> have a chance to support them. 
-    </p>
-    <h3>AT YOUR OWN CONVENIENCE...</h3>
-    <p class="w-quote"><em>“The best way to find yourself is to lose yourself in the service of others."</em><br><b>- Mahatma Gandhi</b></p>
-    <a href="#work"><img src="./images/droppressed.png" alt="null"></a>
-  </section>
-
-  <!-- Work Section -->
-  <section id="work" class="work">
-    <h1>Our Work</h1>
-    <div class="work-cards">
-      <!-- Cards here are generated dynamically with javascript -->
+    <!-- Main Nav-Bar -->
+    <div class="main-nav-container">
+      <nav class="main-nav">
+        <div class="logo">
+          <a href="/">
+            <img src="./assets/images/Logo.svg" height="40" width="69" alt="Logo" />
+          </a>
+        </div>
+        <button
+          id="hamburger"
+          class="hamburger"
+          aria-controls="nav-links"
+          aria-label="open main menu"
+          aria-expanded="false"
+        >
+          <div class="ham-line"></div>
+          <div class="ham-line"></div>
+          <div class="ham-line"></div>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li class="nav-link active"><a href="/">Home</a></li>
+          <li class="nav-link"><a href="/about">About</a></li>
+          <li class="nav-link"><a href="/">Program</a></li>
+          <li class="nav-link"><a href="/">Join</a></li>
+          <li class="nav-link"><a href="/">Sponsor</a></li>
+          <li class="nav-link"><a href="/">News</a></li>
+        </ul>
+        <button class="donate-button">Donate</button>
+      </nav>
     </div>
-    <button class="work-prompt" type="button">Assist a Child Today</button>
-  </section>
 
-  <!-- Founders Section -->
-  <section class="founders">
-    <h1>Founders</h1>
-    <div class="founder-cards">
-      <!-- Cards here are generated dynamically with javascript -->
-    
+    <!-- Welcome Section -->
+    <section class="welcome-container">
+      <div id="welcome" class="welcome">
+        <h1 class="w-header">A LITTLE CHANGE CAN MAKE A BIG DIFFERENCE</h1>
+        <p class="w-description">
+          We are committed to supporting sick and less fortunate children around the
+          globe, touching the lives and hearts of countless children since 2022.
+        </p>
+        <h2 class="w-sub-header">Building Hope</h2>
+        <p class="w-sub-description">
+          By creating nurturing environments, and support programs that provide emotional
+          well-being
+        </p>
+        <div class="w-coa">
+          <a href="#work" aria-label="view our work">
+            <svg
+              width="37"
+              height="38"
+              viewBox="0 0 37 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 2L19.1034 12L34 2"
+                stroke="black"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 14L19.6379 24L35 14"
+                stroke="black"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 26L19.6379 36L35 26"
+                stroke="black"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work-container">
+      <div id="work"></div>
+      <div class="work">
+        <h2 class="work-header">Main Program</h2>
+        <div class="work-cards">
+          <!-- Cards here are generated dynamically with javascript -->
+        </div>
+        <a class="work-prompt" href="#">See the whole program</a>
+      </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founder-container">
+      <div id="founder"></div>
+      <div class="founder">
+        <h2 class="founder-header">Founders</h2>
+        <div class="founder-cards">
+          <!-- Cards here are generated dynamically with javascript -->
+        </div>
+        <button class="founder-more" aria-label="show more founders" aria-pressed="false">
+          <span>MORE</span><i class="fa-solid fa-angle-down"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="footer-container">
+      <footer>
+        <div>
+          <a href="/">
+            <img
+              src="./assets/images/Logo.svg"
+              class="footer-logo"
+              alt="Logo"
+              height="64"
+              width="110"
+            />
+          </a>
+        </div>
+        <div class="footer-content">
+          <div class="footer-license">
+            <p>2022 Save The Child Africa.</p>
+            <p>All Rights Reserved.</p>
+          </div>
+          <p>
+            Built by
+            <a rel="noopener noreferrer" target="_blank" href="https://okoyecharles.com"
+              >Okoye Charles</a
+            >
+          </p>
+          <p>Design Inspiration • <a rel="noopener noreferrer" target="_blank" href="https://www.behance.net/adagio07"
+            >Cindy Shin</a
+          ></p>
+        </div>
+      </footer>
     </div>
-    <div class="founder-more">MORE<i class="fa-solid fa-caret-down"></i></div>
-  </section>
-
-  <hr>
-
-  <!-- Footer Section -->
-  <footer>
-    <div class="footer-logo"><img src="./images/Save-The-Child-Logo.png" alt=""></div>
-    <div class="footer-content">
-      <div class="footer-name">2022 Save The Child Africa.</div>
-      <div class="footer-licence">All Rights Reserved.</div>
-    </div>
-  </footer>
-</body>
+  </body>
 </html>

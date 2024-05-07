@@ -1,0 +1,205 @@
+.about-welcome-container {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-light-grey);
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.about-welcome {
+  width: min(100%, var(--max-content-width));
+  padding: 1.5rem 1.5rem 5rem;
+  background: transparent;
+  color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+
+  .breadcrumb-bar {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .breadcrumb-bar a {
+    color: var(--color-dark);
+    font-size: 14px;
+  }
+
+  .breadcrumb-bar .divider {
+    color: var(--color-orange);
+  }
+
+  .about-welcome-header {
+    margin: 0 0 3rem;
+    color: var(--color-orange);
+    font-weight: 900;
+    font-family: var(--font-raleway);
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: -2%;
+    line-height: 1.1;
+    text-align: center;
+    position: relative;
+  }
+
+  .about-welcome-header::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 2rem;
+    background-color: var(--color-orange);
+  }
+
+  .about-welcome-description {
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 0 0 0.125rem var(--color-grey);
+    border-radius: 0.25rem;
+    max-width: calc(var(--max-content-width) - 256px);
+    margin: 0 auto 2rem;
+    text-align: center;
+  }
+
+  .about-welcome-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .about-welcome-contact a {
+    color: var(--color-dark);
+    font-weight: 600;
+  }
+}
+
+.visits-container {
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+
+.visits {
+  width: min(100%, var(--max-content-width));
+  padding: 3rem 1.5rem 5rem;
+  background: transparent;
+  color: var(--color-dark);
+
+  .visits-header {
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .visits-header::after {
+    content: '';
+    width: 2rem;
+    height: 0.125rem;
+    background-color: var(--color-orange);
+    position: absolute;
+    bottom: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .visits-description {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+.visits-images {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.visits-image {
+  position: relative;
+  border-radius: 0.25rem;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    filter: grayscale(0.75);
+    transition: filter 200ms ease-out;
+  }
+
+  .visits-image-description {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--color-orange\/50);
+    color: white;
+    text-align: center;
+    font-family: var(--font-raleway);
+    transition: background-color 200ms ease-out;
+  }
+
+  .visits-image-description :nth-child(1) {
+    font-size: 36px;
+    font-weight: 700;
+    transition: transform 200ms 275ms ease, opacity 200ms 290ms ease;
+  }
+
+  .visits-image-description :nth-child(2) {
+    transition: transform 200ms 150ms ease, opacity 200ms 150ms ease-out;
+  }
+}
+
+.visits-image:hover {
+  img {
+    filter: grayscale(0);
+    transition: filter 200ms 250ms ease-out;
+  }
+
+  .visits-image-description {
+    background-color: #fff0;
+    transition: background-color 200ms 250ms ease-out;
+  }
+
+  .visits-image-description :nth-child(1) {
+    transform: translateY(-2rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 200ms ease-in, opacity 200ms ease;
+  }
+
+  .visits-image-description :nth-child(2) {
+    transform: translateY(-2rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 200ms 75ms ease-in, opacity 200ms 75ms ease;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-welcome {
+    .about-welcome-header {
+      font-size: 56px;
+    }
+
+    .about-welcome-description {
+      padding: 2rem;
+    }
+  }
+
+  .visits {
+    .visits-header {
+      font-size: 1.5rem;
+    }
+  }
+
+  .visits-images {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

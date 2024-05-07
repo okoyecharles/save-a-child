@@ -172,16 +172,18 @@
   }
 
   .work-card-image {
-    height: 128px;
-    aspect-ratio: 16 / 9;
     box-shadow: 0 0 0 1px var(--color-grey);
     margin-bottom: 0.5rem;
   }
 
-  .work-card-image img {
+  .work-card-image {
+  }
 
+  .work-card-image img {
+    width: 100%;
     object-fit: cover;
   }
+
 }
 
 .work-card:hover {

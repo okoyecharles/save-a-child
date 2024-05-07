@@ -3,7 +3,7 @@
   top: 1rem;
   left: 50%;
   transform: translateY(calc(-1.5rem - 100%)) translateX(-50%);
-  z-index: 10;
+  z-index: 50;
   transition: transform 250ms ease-out;
 
   button {
@@ -40,29 +40,31 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1.5rem;
+}
 
-  ul {
-    display: flex;
-    gap: 1rem;
-    padding: 0;
-  
-    list-style: none;
-  
-    a {
-      text-decoration: none;
-      color: var(--color-grey);
-      font-weight: 600;
-      transition: color 250ms ease-out;
-    }
+.top-nav-socials, .top-nav-links {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
 
-    a:hover {
-      color: white;
-    }
+  ::marker {
+    font-size: 0;
+  }  
+}
+
+.top-nav-socials a, .top-nav-links a {
+  text-decoration: none;
+  color: var(--color-grey);
+  font-weight: 600;
+  transition: color 250ms ease-out;
+
+  &:hover {
+    color: white;
   }
-  
-  .top-nav-links {
-    font-size: 13px;
-  }
+}
+
+.top-nav-links {
+  font-size: 13px;
 }
 
 .main-nav-container {
@@ -95,7 +97,10 @@
     border-top: 1px solid var(--color-grey);
     padding: 1rem;
     z-index: 10;
-    list-style: none;
+
+    ::marker {
+      font-size: 0;
+    }
 
     position: absolute;
     top: 100%;
@@ -107,15 +112,14 @@
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+  }
 
+  .nav-links a {
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--color-dark);
 
-    a {
-      font-size: 14px;
-      text-decoration: none;
-      color: var(--color-dark);
-    }
-
-    a:hover {
+    &:hover {
       text-decoration: underline;
     }
   }
@@ -205,6 +209,15 @@ footer {
     flex: 1;
     display: grid;
     gap: 0.25rem;
+  }
+
+  .footer-content a {
+    color: var(--color-dark);
+    transition: color 250ms ease;
+
+    &:hover {
+      color: var(--color-orange);
+    }
   }
 }
 

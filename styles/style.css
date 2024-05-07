@@ -33,7 +33,6 @@ html {
 .nav-links {
   opacity: 0;
   position: fixed;
-  list-style: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +45,10 @@ html {
   height: 100vh;
   top: 0;
   transition: 1s;
+
+  ::marker {
+    font-size: 0;
+  }
 }
 
 .nav-links.active {
@@ -528,8 +531,11 @@ footer {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
-    list-style: none;
     align-items: center;
+
+    ::marker {
+      font-size: 0;
+    }
   }
 
   .top-nav-link a {

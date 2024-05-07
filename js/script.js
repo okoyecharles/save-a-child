@@ -34,7 +34,7 @@ const createWorkCard = (card) => {
   workCard.className = "work-card";
   workCard.innerHTML = `
   <div class="work-card-image">
-  <img src= ${card.image} alt=${card.header}>
+  <img src= ${card.image} alt=${card.header} height="128" width="228">
   </div>
   <h3 class="work-card-header">${card.header}</h3>
   <p class="work-card-text">${card.description}</p>

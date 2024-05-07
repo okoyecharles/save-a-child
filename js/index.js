@@ -1,8 +1,9 @@
 const workCardContainer = document.querySelector('.work-cards');
 
+
 const workData = [
   {
-    image: './assets/places/burundi.jpg',
+    image: './assets/places/Burundi.jpg',
     header: 'Burundi',
     description: 'Empowering children in poverty through food, clothing & education.',
   },

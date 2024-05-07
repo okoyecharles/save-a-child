@@ -7,6 +7,7 @@
   --color-grey: #D3D3D3;
   --color-light-grey: #EEEEEE;
   --color-orange: #EC5242;
+  --color-orange\/50: hsla(6, 82%, 59%, 0.65);
 
   --max-content-width: 1200px;
 

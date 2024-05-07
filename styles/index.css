@@ -140,7 +140,7 @@
 
   .work-header::after {
     content: '';
-    width: 4rem;
+    width: 2rem;
     height: 0.125rem;
     background-color: var(--color-orange);
 
@@ -174,9 +174,6 @@
   .work-card-image {
     box-shadow: 0 0 0 1px var(--color-grey);
     margin-bottom: 0.5rem;
-  }
-
-  .work-card-image {
   }
 
   .work-card-image img {
@@ -226,7 +223,7 @@
 
   .founder-header::after {
     content: '';
-    width: 4rem;
+    width: 2rem;
     height: 0.125rem;
     background-color: var(--color-orange);
 
@@ -336,7 +333,7 @@
   }
 
   .founder {
-    .founders-header {
+    .founder-header {
       font-size: 1.5rem;
     }
   }

@@ -1,19 +1,16 @@
 const navLinks = document.getElementById("nav-links");
-const workCards = document.querySelector(".work-cards");
-const founderCards = document.querySelector(".founder-cards");
+const workCardContainer = document.querySelector(".work-cards");
 
-const workCardInfo = [
+const workData = [
   {
     image: "./assets/places/burundi.jpg",
     header: "Burundi",
-    description:
-      "Empowering children in poverty through food, clothing & education.",
+    description: "Empowering children in poverty through food, clothing & education.",
   },
   {
     image: "./assets/places/somalia.jpg",
     header: "Somalia",
-    description:
-      "Aiding communities in crisis with shelter & essential resources.",
+    description: "Aiding communities in crisis with shelter & essential resources.",
   },
   {
     image: "./assets/places/mozambique.jpg",
@@ -28,28 +25,25 @@ const workCardInfo = [
   {
     image: "./assets/places/kenya.jpg",
     header: "Kenya",
-    description:
-      "Ensuring clean water for Kenyan children.",
+    description: "Ensuring clean water for Kenyan children.",
   },
 ];
 
-const createWorkCards = (arr, i) => {
+const createWorkCard = (card) => {
   const workCard = document.createElement("div");
   workCard.className = "work-card";
   workCard.innerHTML = `
-    <div class="work-card-image">
-      <img src= ${arr[i].image} alt=${arr[i].header}>
-    </div>
-    <h3 class="work-card-header">${arr[i].header}</h3>
-    <p class="work-card-text">${arr[i].description}</p>
+  <div class="work-card-image">
+  <img src= ${card.image} alt=${card.header}>
+  </div>
+  <h3 class="work-card-header">${card.header}</h3>
+  <p class="work-card-text">${card.description}</p>
   `;
-  workCards.appendChild(workCard);
+  workCardContainer.appendChild(workCard);
 };
-[...Array(workCardInfo.length).keys()].forEach((num) =>
-  createWorkCards(workCardInfo, num)
-);
+workData.forEach(createWorkCard);
 
-const founderInfo = [
+const founderData = [
   {
     image: "./assets/people/dr-tedros.jpg",
     name: "Dr Tedros Adhanom Ghebreyesus",
@@ -73,34 +67,48 @@ const founderInfo = [
   },
 ];
 
-const createFounderCards = (arr, i) => {
+const founderCardContainer = document.querySelector(".founder-cards");
+const founderCardsToggle = document.querySelector(".founder-more");
+const INITIAL_FOUNDER_CARDS = 2;
+let CARDS_HIDDEN = true;
+
+const createFounderCard = (founder, index) => {
   const founderCard = document.createElement("div");
-  founderCard.className = "founder-card hide";
+  founderCard.className =
+    index >= INITIAL_FOUNDER_CARDS ? "founder-card hidden" : "founder-card";
   founderCard.innerHTML = `
   <div class="founder-image">
-    <img src= ${arr[i].image} alt=${arr[i].name.split(" ").join("-")}>
+  <img src= ${founder.image} alt=${founder.name
+    .split(" ")
+    .join("-")} width="200" height="200">
   </div>
-  <div class="founder-card-content">
-    <h1>${arr[i].name}</h1>
-    <p class="founder-occupation">${arr[i].occupation}</p>
-    <hr></hr>
-    <p class="founder-description">${arr[i].description}</p>
+  <div class="founder-content">
+  <h3>${founder.name}</h3>
+  <p class="founder-occupation">${founder.occupation}</p>
+  <p class="founder-description">${founder.description}</p>
+  </div>
   `;
-  founderCards.append(founderCard);
+  founderCardContainer.append(founderCard);
 };
-[...Array(founderInfo.length).keys()].forEach((num) =>
-  createFounderCards(founderInfo, num)
-);
+founderData.forEach(createFounderCard);
 
-const founderCard = Array.from(document.querySelectorAll(".founder-card"));
-const morebutton = document.querySelector(".founder-more");
-morebutton.addEventListener("click", () => {
-  founderCard.forEach((card) => card.classList.toggle("hide"));
-  if (morebutton.classList.contains("less")) {
-    morebutton.innerHTML = 'MORE<i class="fa-solid fa-caret-down"></i>';
-    morebutton.classList.remove("less");
+const founderCards = Array.from(document.querySelectorAll(".founder-card"));
+
+const toggleHiddenFounderCards = () => {
+  founderCards.forEach((card, index) => {
+    if (index >= INITIAL_FOUNDER_CARDS) card.classList.toggle("hidden");
+  });
+  CARDS_HIDDEN = !CARDS_HIDDEN;
+};
+
+founderCardsToggle.addEventListener("click", () => {
+  toggleHiddenFounderCards();
+  if (CARDS_HIDDEN) {
+    founderCardsToggle.setAttribute("aria-label", "show more founders");
+    founderCardsToggle.innerHTML = `<span>MORE</span><i class="fa-solid fa-angle-down"></i>`
   } else {
-    morebutton.innerHTML = 'LESS<i class="fa-solid fa-caret-up"></i>';
-    morebutton.classList.add("less");
+    founderCardsToggle.setAttribute("aria-label", "show less founders");
+    founderCardsToggle.innerHTML = `<span>LESS</span><i class="fa-solid fa-angle-up"></i>`
   }
+  founderCardsToggle.setAttribute("aria-pressed", !CARDS_HIDDEN);
 });

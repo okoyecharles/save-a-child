@@ -44,7 +44,11 @@
           </li>
         </ul>
         <ul class="top-nav-links">
-          <li><a href="https://okoyecharles.com">Portfolio</a></li>
+          <li>
+            <a href="https://okoyecharles.com" target="_blank" rel="noopener"
+              >Portfolio</a
+            >
+          </li>
         </ul>
       </nav>
     </div>
@@ -133,30 +137,38 @@
     <section class="work-container">
       <div id="work"></div>
       <div class="work">
-        <h1 class="work-header">Main Program</h1>
+        <h2 class="work-header">Main Program</h2>
         <div class="work-cards">
           <!-- Cards here are generated dynamically with javascript -->
-          <!-- eg.
-            <div class="work-card">
-              <div class="work-card-image">
-                <img src="${arr[i].image}" alt="${arr[i].header}" />
-              </div>
-              <h2 class="work-card-title">${arr[i].header}</h2>
-              <p class="work-card-text">${arr[i].description}</p>
-            </div>
-          -->
         </div>
         <a class="work-prompt" href="#">See the whole program</a>
       </div>
     </section>
 
     <!-- Founders Section -->
-    <section class="founders">
-      <h1>Founders</h1>
-      <div class="founder-cards">
-        <!-- Cards here are generated dynamically with javascript -->
+    <section class="founder-container">
+      <div id="founder"></div>
+      <div class="founder">
+        <h2 class="founder-header">Founders</h2>
+        <div class="founder-cards">
+          <!-- Cards here are generated dynamically with javascript -->
+          <!-- 
+          <div class="founder-card">
+            <div class="founder-image">
+              <img src= ${founder.image} alt=${founder.name.split(" ").join("-")} width="200" height="200">
+            </div>
+            <div class="founder-content">
+              <h3>${founder.name}</h3>
+              <p class="founder-occupation">${founder.occupation}</p>
+              <p class="founder-description">${founder.description}</p>
+            </div>
+          </div>
+           -->
+        </div>
+        <button class="founder-more" aria-label="show more founders" aria-pressed="false">
+          <span>MORE</span><i class="fa-solid fa-angle-down"></i>
+        </button>
       </div>
-      <div class="founder-more">MORE<i class="fa-solid fa-caret-down"></i></div>
     </section>
 
     <!-- Footer Section -->

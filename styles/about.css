@@ -10,7 +10,6 @@
   padding: 1.5rem 1.5rem 5rem;
   background: transparent;
   color: var(--color-dark);
-
   display: flex;
   flex-direction: column;
 
@@ -41,7 +40,6 @@
     letter-spacing: -2%;
     line-height: 1.1;
     text-align: center;
-
     position: relative;
   }
 
@@ -51,7 +49,6 @@
     bottom: -0.75rem;
     left: 50%;
     transform: translateX(-50%);
-
     height: 2px;
     width: 2rem;
     background-color: var(--color-orange);
@@ -104,7 +101,6 @@
     width: 2rem;
     height: 0.125rem;
     background-color: var(--color-orange);
-
     position: absolute;
     bottom: -0.75rem;
     left: 50%;
@@ -138,17 +134,14 @@
   .visits-image-description {
     position: absolute;
     inset: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 2rem;
-    
     background-color: var(--color-orange\/50);
     color: white;
     text-align: center;
     font-family: var(--font-raleway);
-
     transition: background-color 200ms ease-out;
   }
 
@@ -170,7 +163,7 @@
   }
 
   .visits-image-description {
-    background-color: #ffffff00;
+    background-color: #fff0;
     transition: background-color 200ms 250ms ease-out;
   }
 
@@ -188,7 +181,6 @@
     transition: transform 200ms 75ms ease-in, opacity 200ms 75ms ease;
   }
 }
-
 
 @media screen and (min-width: 768px) {
   .about-welcome {

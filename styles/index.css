@@ -2,7 +2,7 @@
 .welcome-container {
   display: grid;
   place-items: center;
-  background: 
+  background:
     linear-gradient(rgba(0, 0, 0, 0.1), 20px, rgba(255, 255, 255, 0)),
     linear-gradient(rgba(255, 255, 255, 0.8), white),
     url('../assets/background/african-boy.webp');
@@ -51,6 +51,7 @@
   margin: 4rem 0 0;
   display: grid;
   place-items: center;
+
   --speed: 1.5s;
   --color-initial: var(--color-grey);
   --color-play: var(--color-dark);
@@ -74,12 +75,13 @@
   a svg path:nth-child(1) {
     stroke: var(--color-initial);
     animation: color-change-1 var(--speed) linear infinite;
-    
   }
+
   a svg path:nth-child(2) {
     stroke: var(--color-initial);
     animation: color-change-2 var(--speed) linear infinite;
   }
+
   a svg path:nth-child(3) {
     stroke: var(--color-initial);
     animation: color-change-3 var(--speed) linear infinite;
@@ -87,16 +89,21 @@
 }
 
 @keyframes color-change-1 {
-  0%, 20% { stroke: var(--color-initial) }
-  10% { stroke: var(--color-play) }
+  0%,
+  20% { stroke: var(--color-initial); }
+  10% { stroke: var(--color-play); }
 }
+
 @keyframes color-change-2 {
-  14%, 37% { stroke: var(--color-initial) }
-  25% { stroke: var(--color-play) }
+  14%,
+  37% { stroke: var(--color-initial); }
+  25% { stroke: var(--color-play); }
 }
+
 @keyframes color-change-3 {
-  30%, 50% { stroke: var(--color-initial) }
-  40% { stroke: var(--color-play) }
+  30%,
+  50% { stroke: var(--color-initial); }
+  40% { stroke: var(--color-play); }
 }
 
 @keyframes hover {
@@ -143,7 +150,6 @@
     width: 2rem;
     height: 0.125rem;
     background-color: var(--color-orange);
-
     position: absolute;
     bottom: -0.75rem;
     left: 50%;
@@ -180,7 +186,6 @@
     width: 100%;
     object-fit: cover;
   }
-
 }
 
 .work-card:hover {
@@ -226,7 +231,6 @@
     width: 2rem;
     height: 0.125rem;
     background-color: var(--color-orange);
-
     position: absolute;
     bottom: -0.75rem;
     left: 50%;
@@ -277,13 +281,11 @@
 .founder-more {
   padding: 1rem;
   border: 1px solid var(--color-grey);
-
   display: flex;
   gap: 1ch;
   justify-content: center;
   align-items: center;
   background-color: white;
-
   transition: background-color 250ms ease-out;
 
   i {
@@ -347,6 +349,7 @@
   .founder-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .founder-card {
     &.hidden {
       display: grid;

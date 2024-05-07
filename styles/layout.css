@@ -11,18 +11,18 @@
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
     color: white;
-    font-weight: semibold;
+    font-weight: 600;
     box-shadow: 0 0 0 0.125rem var(--color-orange);
-
     transition: box-shadow 250ms ease-out;
   }
 }
 
 .skip-to-content:focus-within {
-  transform: translateY(0px) translateX(-50%);
+  transform: translateY(0) translateX(-50%);
 }
 
-.skip-to-content:hover, .skip-to-content:focus-within {
+.skip-to-content:hover,
+.skip-to-content:focus-within {
   box-shadow: 0 0 0 0 var(--color-orange);
 }
 
@@ -35,24 +35,25 @@
 .top-nav {
   width: min(100%, var(--max-content-width));
   padding: 0.5rem 2rem;
-
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 1.5rem;
 }
 
-.top-nav-socials, .top-nav-links {
+.top-nav-socials,
+.top-nav-links {
   display: flex;
   gap: 1rem;
   padding: 0;
 
   ::marker {
     font-size: 0;
-  }  
+  }
 }
 
-.top-nav-socials a, .top-nav-links a {
+.top-nav-socials a,
+.top-nav-links a {
   text-decoration: none;
   color: var(--color-grey);
   font-weight: 600;
@@ -73,7 +74,6 @@
   place-items: center;
   z-index: 10;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
   position: sticky;
   top: 0;
 }
@@ -81,7 +81,6 @@
 .main-nav {
   width: min(100%, var(--max-content-width));
   padding: 1rem 2rem;
-  
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -106,8 +105,6 @@
     top: 100%;
     left: 0;
     width: 100%;
-
-    
     display: none;
     flex-direction: column;
     gap: 2rem;
@@ -145,8 +142,6 @@
     background-color: var(--color-orange);
     box-shadow: 0 0 0 0 var(--color-orange);
   }
-
-  
 }
 
 /* hamburger button styles */
@@ -196,7 +191,6 @@ footer {
   padding: 2rem;
   font-size: 14px;
   font-weight: 500;
-
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -224,6 +218,7 @@ footer {
 @media screen and (min-width: 720px) {
   .main-nav {
     flex-direction: row;
+
     .nav-links {
       padding: 0;
       width: auto;
@@ -231,18 +226,15 @@ footer {
       background-color: transparent;
       border: none;
       position: static;
-
-      
       display: flex;
       flex-direction: row;
-      
-  
+
       a {
         font-size: 14px;
         text-decoration: none;
         color: var(--color-dark);
       }
-  
+
       a:hover {
         text-decoration: underline;
       }

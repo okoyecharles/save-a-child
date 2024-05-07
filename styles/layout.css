@@ -186,6 +186,7 @@
   place-items: center;
 }
 
+/* stylelint-disable -- .footer should be at the bottom */
 footer {
   width: min(100%, var(--max-content-width));
   padding: 2rem;
@@ -214,6 +215,7 @@ footer {
     }
   }
 }
+/* stylelint-enable -- .footer should be at the bottom */
 
 @media screen and (min-width: 720px) {
   .main-nav {

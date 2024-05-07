@@ -170,7 +170,7 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  width: min(100%, 480px);
+  width: min(100%, 480px); /* stylelint-disable-line -- min() not recognized by stylelint */
 
   .work-card-header {
     color: var(--color-orange);

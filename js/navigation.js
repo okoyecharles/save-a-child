@@ -14,3 +14,5 @@ mobileHamburgerButton.addEventListener("click", (event) => {
   );
   mobileHamburgerMenu.dataset.menuOpen = isMenuOpen;
 });
+
+// meta tags ... linter errors ... design inspiration ... favicon
